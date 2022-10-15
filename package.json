@@ -1,0 +1,25 @@
+{
+  "name": "hema",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "scripts": {
+    "run": "babel-node src/index.ts --extensions \".ts\"",
+    "dev": "NODE_ENV=DEV nodemon --exec yarn run run -- src/index.ts",
+    "dev:test": "NODE_ENV=TEST nodemon --exec yarn run run -- src/index.ts",
+    "build": "babel src --out-dir dist --copy-files --extensions \".ts,tsx,html,css\" --source-maps inline",
+    "start": "NODE_ENV=PROD node dist/index.js",
+    "tsc": "tsc --noEmit",
+    "debug": "yarn run dev --inspect-brk"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.16.0",
+    "@babel/core": "7.16.0",
+    "@babel/node": "7.16.0",
+    "@babel/preset-typescript": "7.16.0",
+    "@types/node": "14.17.6",
+    "babel-plugin-tsconfig-paths-module-resolver": "1.0.3",
+    "nodemon": "2.0.14",
+    "typescript": "4.4.4"
+  }
+}
