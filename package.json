@@ -1,0 +1,25 @@
+{
+  "name": "project-name",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "run": "babel-node index.ts --extensions \".ts\"",
+    "dev": "NODE_ENV=DEV nodemon --exec npm run run -- index.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@babel/cli": "7.20.7",
+    "@babel/core": "7.20.12",
+    "@babel/node": "7.20.7",
+    "@babel/preset-env": "7.20.2",
+    "@babel/preset-typescript": "7.18.6",
+    "@types/node": "18.13.0",
+    "babel-plugin-tsconfig-paths-module-resolver": "1.0.4",
+    "nodemon": "2.0.14",
+    "typescript": "4.9.5"
+  }
+}
